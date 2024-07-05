@@ -1,0 +1,32 @@
+package Java;
+
+import java.util.Scanner;
+
+public class SnakeMatrix {
+	public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int n1=sc.nextInt();
+		int arr[][]=new int[n][n1];
+		for(int i=0;i<n;i++) {
+			for(int j=0;j<n1;j++) {
+				 arr[i][j]=sc.nextInt();
+			}
+		}
+			for(int i=0;i<arr.length;i++) { //row
+			if(i%2==0) {
+				for(int j=arr[0].length-1;j>=0;j--) { //1 row reverse order
+					//for(int j=0;j<arr.length;j++){ // for 1 row order
+					System.out.print(arr[i][j]+" ");
+				}
+			}
+			else {
+				for(int j=0;j<arr.length;j++) { //2 row order
+					//for(int j=arr[0].length-1;j>=0;j--) {// 2 row reverse order
+			System.out.print(arr[i][j]+" ");
+		}
+	}
+}
+}
+}
+
