@@ -1,0 +1,33 @@
+package String;                                    
+import java.util.*;
+public class IPaddress{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);              
+		String str=sc.nextLine();
+		String[] separate=str.split("\\.");                //split the string
+		 int n=separate.length;
+		int count=0;
+        if(n==4) {
+		
+			for(int i=0;i<4;i++) {
+				int m=Integer.parseInt(separate[i]);          //port size check limit
+				 if(m>=0&&m<=255) {
+					 count++;
+				 }
+			
+					 if(separate[i].length()>1&&separate[i].charAt(0)=='0') {      //0 front ;a eruntha false
+						 count--;
+				 
+					 }}
+				 if(count==4) {
+			System.out.print("valid");
+				 }
+		else {
+			System.out.print("Invalid");
+			}
+			}
+        else {
+        	System.out.print("Invalid");
+			}
+		}
+}
